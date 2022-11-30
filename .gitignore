@@ -1,52 +1,29 @@
-# Prerequisites
-*.d
+#include <stdio.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+int main(){
 
-# Linker output
-*.ilk
-*.map
-*.exp
+int n=9485;
 
-# Precompiled Headers
-*.gch
-*.pch
+int i=0,rem, arr[16], ct=0;
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+while(n!=0){
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+rem=n%2;
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+arr[i]=rem;
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+n=n/2; ct++;
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+i++;
+
+}
+
+for (i=ct-1;i>=0; i--){
+
+printf("%d", arr[i]);
+
+}
+
+return 0;
+
+}
